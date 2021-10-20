@@ -24,12 +24,10 @@ class RVAdapter(private var arr: ArrayList<StackoverflowData>) :
         )
     }
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val msg = arr[position]
+        val msg = arr[position].name
         holder.itemView.apply {
             title = findViewById(R.id.textview)
-            des = findViewById(R.id.textview1)
-            title.text = msg.toString()
-            des.text = msg.toString()
+            title.text = msg
         }
     }
 
